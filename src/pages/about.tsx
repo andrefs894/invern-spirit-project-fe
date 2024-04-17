@@ -5,7 +5,7 @@ export default function About() {
   useEffect(() => {
     fetch("/api/helloworld")
       .then((res) => res.json())
-      .then((data) => setMessage(data.message));
+      .then((data) => setMessage(JSON.stringify(data)));
   }, []);
   return (
     <>
